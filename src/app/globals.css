@@ -93,9 +93,63 @@ body {
   font-weight: normal;
 }
 
+*::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
 *{
   font-family: 'SF';
   font-weight: normal;
   color: #1d1d1f;
   font-size: 16px;
+}
+
+#home-second-main-content > p {
+  background-image: linear-gradient(45deg, #86868B, #1d1d1f, #86868B, #1d1d1f);
+  background-size: 300% 100%;
+  animation: gradientShift 10s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gradient Text Animation */
+#home-second-main-content > p {
+  background-image: linear-gradient(45deg, #86868B, #1d1d1f, #86868B, #1d1d1f);
+  background-size: 300% 100%;
+  animation: gradientShift 10s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

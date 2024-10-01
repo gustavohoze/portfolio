@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'SF';
+    src: url('../app/fonts/SF-Pro-Text-Black.otf');
+    font-weight: 900;
+}
+
+.carousel--item h2{
+    font-family: 'SF';
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.carousel {
+    height: 600px;
+    width: 100%;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.carousel.dragging {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.carousel--wrap {
+    white-space: nowrap;
+    transition: transform 0.2s ease-out;
+}
+
+.carousel--item {
+    display: inline-block;
+    width: 275px; /* Fixed width */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.carousel--item figure {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 600px; /* Set the fixed height */
+    width: 275px; /* Ensure the figure has the same width */
+    overflow: hidden;
+}
+
+.carousel--item figure img {
+    padding-right: 10px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    vertical-align: middle;
+    transform-origin: center;
+}
+.carousel--item h2 {
+    z-index: 1;
+    font-size: 3vw;
+    padding-block: 10px;
+    width: 265px;
+    background: #000;
+    text-align: center;
+}
+
+.carousel--progress {
+    position: relative;
+    z-index: 2;
+    bottom: calc(1vw + 100px);
+    left: 1vw;
+    right: 1vw;
+    height: 0.5vw;
+    background: hsla(0, 0%, 100%, .2);
+    overflow: hidden;
+    border: red 1px sold;
+    width: calc(100% - 43px);
+    border-radius: 40px;
+}
+
+.carousel--progress-bar {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffffff63;
+    transform-origin: left;
+    transition: transform 0.2s ease;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.carousel--item:hover {
+    transform: translateY(-80px);
+    filter: grayscale(0);
+}

@@ -21,7 +21,7 @@ const DateFormater = () => {
   
     return (
       <div className="date-time-display">
-        <p>{formatDate(dateTime)} {formatTime(dateTime)}</p>
+        <p className='text-grey'>{formatDate(dateTime)} {formatTime(dateTime)}</p>
       </div>
     );
 }
