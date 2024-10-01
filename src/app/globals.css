@@ -76,3 +76,26 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'SF';
+  src: url('../app/fonts/SF-Pro-Text-Black.otf');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'SF';
+  src: url('../app/fonts/SF-Pro-Text-Bold.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'SF';
+  src: url('../app/fonts/SF-Pro-Text-Regular.otf');
+  font-weight: normal;
+}
+
+*{
+  font-family: 'SF';
+  font-weight: normal;
+  color: #1d1d1f;
+  font-size: 16px;
+}
