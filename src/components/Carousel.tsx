@@ -8,6 +8,7 @@ import Fig4 from '@/app/assets/fig4.jpg'
 import Fig5 from '@/app/assets/fig5.jpg'
 import Fig6 from '@/app/assets/fig6.jpg'
 import Fig7 from '@/app/assets/fig1.jpg'
+import Image from 'next/image';
 
 interface DragScrollOptions {
   el: string;
@@ -48,10 +49,15 @@ class DragScroll {
   }
 
   bindings() {
-    ['events', 'calculate', 'raf', 'move', 'raf', 'handleTouchStart', 'handleTouchMove', 'handleTouchEnd'].forEach((i) => {
-      (this as any)[i] = (this as any)[i].bind(this);
-    });
-  }
+    this.events = this.events.bind(this);
+    this.calculate = this.calculate.bind(this);
+    this.raf = this.raf.bind(this);
+    this.move = this.move.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
+    this.handleTouchMove = this.handleTouchMove.bind(this);
+    this.handleTouchEnd = this.handleTouchEnd.bind(this);
+}
+
 
   calculate() {
     if (this.$items.length > 0 && this.$wrap) {
@@ -162,7 +168,7 @@ const Carousel = () => {
         ].map((item, index) => (
           <div className="carousel--item" key={index}>
             <figure>
-              <img src={item.src} alt={item.title}/>
+              <Image src={item.src} alt={item.title} width={275} height={600}/>
             </figure>
             <h2 className='uppercase'>{item.title}</h2>
           </div>
