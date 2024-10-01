@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen w-full bg-white flex">
       <div
         id="home-sidebar"
-        className="w-[16%] h-screen border-r-[1px] border-outline sticky top-0 left-0"
+        className="fadeInLeft w-[16%] h-screen border-r-[1px] border-outline sticky top-0 left-0 "
       >
         <div
           id="home-first-sidebar-content"
@@ -120,29 +120,29 @@ export default function Home() {
           id="home-first-main-content"
           className="h-[9vh] flex items-end justify-between px-12"
         >
-          <div className="text-grey relative">
-            <span className="text-grey">Welcome, 大家 !</span>
-            <span className="text-[12px] absolute -top-2 -right-16 w-[8ch] text-grey">
+          <div className="text-grey relative ">
+            <div className="text-grey fadeInLeft">Welcome, 大家 !</div>
+            <span className="text-[12px] absolute -top-2 -right-16 w-[8ch] text-grey fadeInBottom">
               /dà jiā/
             </span>
           </div>
           <DateFormater />
         </div>
-        <div id="home-second-main-content" className="h-[36vh] border-b-[1px] border-outline mx-12 my-6">
-          <p className="text-[32px] font-bold leading-[52px] bg-gradient-to-r from-grey to-contrast text-transparent bg-clip-text inline-block">
+        <div id="home-second-main-content" className="fadeInBottom h-[36vh] border-b-[1px] border-outline mx-12 my-6">
+          <p className=" text-[32px] font-bold leading-[52px] bg-gradient-to-r from-grey to-contrast text-transparent bg-clip-text inline-block">
             Gustavo is a passionate software engineer on a mission to become a
             world-class developer. Driven by continuous learning, he leverages
             each project as an opportunity to grow his skills and expertise.
           </p>
         </div>
-        <div id="home-third-main-content" className="px-12 h-[200vh]">
+        <div id="home-third-main-content" className="px-12 h-[200vh] fadeInTop">
         <a
                 href=""
-                className="text-outline uppercase tracking-wide text-[10px] "
+                className=" text-outline uppercase tracking-wide text-[10px] "
               >
                 Playground
               </a>
-        <div id="projectShowcaseCarousel" className="mt-6 overflow-hidden">
+        <div id="projectShowcaseCarousel" className="mt-6 overflow-hidden fadeInLeft">
           <Carousel />
         </div>
         </div>
