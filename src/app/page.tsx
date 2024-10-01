@@ -1,8 +1,6 @@
-import DateFormater from '@/components/DateFormater/page'
+import DateFormater from '@/components/DateFormater'
 
 export default function Home() {
-
-  let date = new Date();
 
   return (
     <main className="min-h-screen w-full bg-white flex">
