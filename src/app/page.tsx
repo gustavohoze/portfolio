@@ -1,6 +1,11 @@
+import DateFormater from '@/components/DateFormater/page'
+
 export default function Home() {
+
+  let date = new Date();
+
   return (
-    <main className="min-h-screen w-full bg-white">
+    <main className="min-h-screen w-full bg-white flex">
       <div id="home-sidebar" className="w-[16%] h-screen border-r-[1px] border-outline">
         <div id="home-first-sidebar-content" className="h-[27%] px-8 pt-6 border-b-[1px] border-outline">
           <div id="content" className="flex flex-col items-start gap-2 w-auto h-[80%]">
@@ -42,6 +47,9 @@ export default function Home() {
             </div>
         </div>
 
+      </div>
+      <div id="home-main-content">
+        <DateFormater />
       </div>
     </main>
   );
