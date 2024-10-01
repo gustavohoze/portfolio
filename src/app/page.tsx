@@ -16,7 +16,7 @@ export default function Home() {
               <a href="" className="text-outline uppercase tracking-wide text-[10px]">Web Development</a>
               <a href="" className="text-grey capitalize tracking-wide text-[10px]">API Integration</a>
               <a  href="" className="text-grey capitalize tracking-wide text-[10px]">Pudding Fest</a>
-              <a href="" className="text-grey capitalize tracking-wide text-[10px]">BNCC's Praetorian</a>
+              <a href="" className="text-grey capitalize tracking-wide text-[10px]">BNCC&apos;s Praetorian</a>
               <a href="" className="text-grey capitalize tracking-wide text-[10px]">First Portfolio</a>
             </div>
             <div className="flex flex-col gap-1">
