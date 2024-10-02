@@ -29,6 +29,7 @@
 
 .carousel--item {
     display: inline-block;
+    position: relative;
     width: 275px; /* Fixed width */
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -96,4 +97,28 @@
 .carousel--item:hover {
     transform: translateY(-80px);
     filter: grayscale(0);
+}
+
+
+
+.carousel--item figure::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.607);
+    z-index: 4;
+    overlay: hidden;
+    max-width: 96.3%;
+}
+
+.centerAbsolute{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel--item:hover .centerAbsolute{
+    opacity: 1;
 }
