@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useMemo } from "react";
 import Image from "next/image";
-import { projectData } from "../lib/projectData";
+import { projectData } from "@/lib/projectData";
 import "./Carousel.css";
 
 interface DragScrollOptions {
