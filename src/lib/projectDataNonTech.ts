@@ -21,11 +21,11 @@ import JavaScript from "@/app/assets/JavaScript.webp";
 import Firebase from "@/app/assets/Firebase.webp";
 import Git from "@/app/assets/Git.webp";
 
-export const projectData = [
-  { 
-    src: Fig1.src, 
-    title: "CariKursus", 
-    gitLink:"https://github.com/gustavohoze/carikursusfixed.git",
+export const projectTechData = [
+  {
+    src: Fig2.src,
+    title: "CariKursus",
+    gitLink: "https://github.com/gustavohoze/carikursusfixed.git",
     stacks: [
       { src: Postman.src, alt: "Postman" },
       { src: MySQL.src, alt: "MySQL" },
@@ -33,25 +33,25 @@ export const projectData = [
       { src: Next.src, alt: "Next.js" },
       { src: Tailwind.src, alt: "Tailwind CSS" },
       { src: Prisma.src, alt: "Prisma" },
-      { src: Shadcn.src, alt: "Shadcn UI" }
-    ]
+      { src: Shadcn.src, alt: "Shadcn UI" },
+    ],
   },
-  { 
-    src: Fig2.src, 
-    title: "Pudding Fest", 
-    gitLink:"https://github.com/gustavohoze/LnT-FInal-Project.git",
+  {
+    src: Fig4.src,
+    title: "Pudding Fest",
+    gitLink: "https://github.com/gustavohoze/LnT-FInal-Project.git",
     stacks: [
       { src: HTML.src, alt: "HTML" },
       { src: CSS.src, alt: "CSS" },
       { src: Jquery.src, alt: "jQuery" },
       { src: JavaScript.src, alt: "JavaScript" },
-      { src: Bootstrap.src, alt: "Bootstrap" }
-    ]
+      { src: Bootstrap.src, alt: "Bootstrap" },
+    ],
   },
-  { 
-    src: Fig3.src, 
-    title: "BNCC'S Praetorian", 
-    gitLink:"https://github.com/gustavohoze/FE-B.git",
+  {
+    src: Fig3.src,
+    title: "BNCC'S Praetorian",
+    gitLink: "https://github.com/gustavohoze/FE-B.git",
     stacks: [
       { src: HTML.src, alt: "HTML" },
       { src: CSS.src, alt: "CSS" },
@@ -59,25 +59,45 @@ export const projectData = [
       { src: JavaScript.src, alt: "JavaScript" },
       { src: Bootstrap.src, alt: "Bootstrap" },
       { src: Git.src, alt: "Git" },
-      { src: Firebase.src, alt: "Firebase" }
-    ]
+      { src: Firebase.src, alt: "Firebase" },
+    ],
   },
-  { 
-    src: Fig4.src, 
-    title: "First Portfolio", 
-    gitLink:"https://github.com/gustavohoze/Shecraa.git",
+  {
+    src: Fig4.src,
+    title: "First Portfolio",
+    gitLink: "https://github.com/gustavohoze/Shecraa.git",
     stacks: [
       { src: HTML.src, alt: "HTML" },
       { src: CSS.src, alt: "CSS" },
-      { src: JavaScript.src, alt: "JavaScript" }
-    ]
+      { src: JavaScript.src, alt: "JavaScript" },
+    ],
   },
-  { src: Fig5.src, title: "CRUD System",gitLink:"https://github.com/gustavohoze/LnTMidJava.git", stacks: [{
-  src: Java.src, alt: "JAVA"
-  }] },
-  { src: Fig6.src, title: "JAVAFX & Database Integration",gitLink:"https://github.com/gustavohoze/LnTFinalJava.git", stacks: [{
-    src: Java.src, alt: "JAVA"
-    },{
-      src: JavaFX.src, alt: "JAVAFX"
-    }] },
-];
+  {
+    src: Fig5.src,
+    title: "CRUD System",
+    gitLink: "https://github.com/gustavohoze/LnTMidJava.git",
+    stacks: [
+      {
+        src: Java.src,
+        alt: "JAVA",
+      },
+    ],
+  },
+  {
+    src: Fig6.src,
+    title: "JAVAFX & Database Integration",
+    gitLink: "https://github.com/gustavohoze/LnTFinalJava.git",
+    stacks: [
+      {
+        src: Java.src,
+        alt: "JAVA",
+      },
+      {
+        src: JavaFX.src,
+        alt: "JAVAFX",
+      },
+    ],
+  }
+]
+
+export default projectTechData;

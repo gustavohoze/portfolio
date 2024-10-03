@@ -1,14 +1,30 @@
 "use client";
 import React, { useRef, useEffect, useMemo } from "react";
 import Image from "next/image";
-import { projectData } from "@/lib/projectData";
 import "./Carousel.css";
+import Link from "next/link";
+
+interface StackItem {
+  src: string;
+  alt: string;
+}
+
+interface SkillItem {
+  src: string;
+  title: string;
+  gitLink: string;
+  stacks: StackItem[];
+}
+
+interface CarouselProps {
+  projectData: SkillItem[];
+}
 
 interface DragScrollOptions {
-  el: string;
-  wrap: string;
-  item: string;
-  bar: string;
+  el: HTMLElement;
+  wrap: HTMLElement;
+  items: NodeListOf<HTMLElement>;
+  bar: HTMLElement;
 }
 
 const lerp = (f0: number, f1: number, t: number) => (1 - t) * f0 + t * f1;
@@ -16,10 +32,10 @@ const clamp = (val: number, min: number, max: number) =>
   Math.max(min, Math.min(val, max));
 
 class DragScroll {
-  private $el: HTMLElement | null;
-  private $wrap: HTMLElement | null;
+  private $el: HTMLElement;
+  private $wrap: HTMLElement;
   private $items: NodeListOf<HTMLElement>;
-  private $bar: HTMLElement | null;
+  private $bar: HTMLElement;
   private progress: number = 0;
   private x: number = 0;
   private velocity: number = 1;
@@ -31,10 +47,10 @@ class DragScroll {
   private playrate: number = 0.1;
 
   constructor(obj: DragScrollOptions) {
-    this.$el = document.querySelector(obj.el);
-    this.$wrap = this.$el?.querySelector(obj.wrap) || null;
-    this.$items = this.$el?.querySelectorAll(obj.item) || ({} as NodeListOf<HTMLElement>);
-    this.$bar = this.$el?.querySelector(obj.bar) || null;
+    this.$el = obj.el;
+    this.$wrap = obj.wrap;
+    this.$items = obj.items;
+    this.$bar = obj.bar;
     this.init();
   }
 
@@ -120,46 +136,58 @@ class DragScroll {
       this.$bar.style.transform = `scaleX(${0.18 + this.playrate * 0.82})`;
     }
   }
+
+  destroy() {
+    window.removeEventListener("resize", this.calculate);
+    this.$el.removeEventListener("touchstart", this.handleTouchStart);
+    window.removeEventListener("touchmove", this.handleTouchMove);
+    window.removeEventListener("touchend", this.handleTouchEnd);
+    window.removeEventListener("mousedown", this.handleTouchStart);
+    window.removeEventListener("mousemove", this.handleTouchMove);
+    window.removeEventListener("mouseup", this.handleTouchEnd);
+    document.body.removeEventListener("mouseleave", this.handleTouchEnd);
+  }
 }
 
-const Carousel: React.FC = () => {
+const Carousel: React.FC<CarouselProps> = ({ projectData }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scroll = new DragScroll({
-      el: ".carousel",
-      wrap: ".carousel--wrap",
-      item: ".carousel--item",
-      bar: ".carousel--progress-bar",
-    });
+    let scroll: DragScroll | null = null;
 
-    const raf = () => {
-      requestAnimationFrame(raf);
-      scroll.raf();
-    };
-    raf();
+    if (carouselRef.current && wrapRef.current && progressBarRef.current) {
+      scroll = new DragScroll({
+        el: carouselRef.current,
+        wrap: wrapRef.current,
+        items: wrapRef.current.querySelectorAll('.carousel--item'),
+        bar: progressBarRef.current,
+      });
+
+      const raf = () => {
+        requestAnimationFrame(raf);
+        scroll?.raf();
+      };
+      raf();
+    }
 
     return () => {
-      window.removeEventListener("resize", scroll.calculate);
-      window.removeEventListener("touchmove", scroll.handleTouchMove);
-      window.removeEventListener("touchend", scroll.handleTouchEnd);
-      window.removeEventListener("mousedown", scroll.handleTouchStart);
-      window.removeEventListener("mousemove", scroll.handleTouchMove);
-      window.removeEventListener("mouseup", scroll.handleTouchEnd);
-      document.body.removeEventListener("mouseleave", scroll.handleTouchEnd);
+      scroll?.destroy();
     };
-  }, []);
+  }, [projectData]);
 
   const carouselItems = useMemo(() => 
     projectData.map((item, index) => (
-      <div className="carousel--item" key={index}>
+      <div className="carousel--item" key={item.gitLink} >
         <figure>
           <Image src={item.src} alt={item.title} width={275} height={600} />
         </figure>
-
+        <Link href={item.gitLink} target="blank">
         <h2 className={item.title.length > 18 ? "sizedDown" : ""}>
-        {item.title}
-      </h2>
+          {item.title}
+        </h2>
+        </Link>
         
         <div className="absolute z-20 centerAbsolute flex flex-col gap-4">
           {item.stacks?.map((stack, stackIndex) => (
@@ -174,15 +202,15 @@ const Carousel: React.FC = () => {
         </div>
       </div>
     )),
-  []);
+  [projectData]);
 
   return (
-    <div className="carousel" ref={carouselRef}>
-      <div className="carousel--wrap">
+    <div className="carousel overflow-hidden max-h-[750px]" ref={carouselRef}>
+      <div className="carousel--wrap" ref={wrapRef}>
         {carouselItems}
       </div>
       <div className="carousel--progress">
-        <div className="carousel--progress-bar"></div>
+        <div className="carousel--progress-bar" ref={progressBarRef}></div>
       </div>
     </div>
   );

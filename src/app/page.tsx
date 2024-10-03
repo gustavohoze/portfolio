@@ -1,6 +1,9 @@
 import Carousel from "@/components/Carousel";
 import DateFormatter from "@/components/DateFormater";
 import Link from "next/link";
+import TechData from "@/lib/projectDataTech";
+import NonTechData from "@/lib/projectDataNonTech";
+import Marquee from "react-fast-marquee";
 
 const navLinks = [
   { href: "/", label: "About" },
@@ -11,7 +14,12 @@ const navLinks = [
 const projectCategories = [
   {
     title: "Web Development",
-    projects: ["Cari kursus", "Pudding Fest", "BNCC's Praetorian", "First Portfolio"],
+    projects: [
+      "Cari kursus",
+      "Pudding Fest",
+      "BNCC's Praetorian",
+      "First Portfolio",
+    ],
   },
   {
     title: "Java Programming",
@@ -33,7 +41,10 @@ export default function Home() {
       <aside className="fadeInLeft w-[16%] h-screen border-r border-outline sticky top-0 left-0">
         <div className="h-[27%] px-8 pt-6 border-b border-outline">
           <div className="flex flex-col items-start gap-2 h-[80%] text-black">
-            <Link href="/" className="font-[900] text-[23px] w-[90px] h-[51.92px] bg-greyBox flex items-center justify-center text-black p-2">
+            <Link
+              href="/"
+              className="font-[900] text-[23px] w-[90px] h-[51.92px] bg-greyBox flex items-center justify-center text-black p-2"
+            >
               何泽
             </Link>
             {navLinks.map((link) => (
@@ -51,7 +62,11 @@ export default function Home() {
                   {category.title}
                 </span>
                 {category.projects.map((project) => (
-                  <Link key={project} href="#" className="text-grey capitalize text-[10px]">
+                  <Link
+                    key={project}
+                    href="#"
+                    className="text-grey capitalize text-[10px]"
+                  >
                     {project}
                   </Link>
                 ))}
@@ -75,7 +90,7 @@ export default function Home() {
           ))}
         </div>
       </aside>
-      <div className="w-[84%] min-h-[200vh]">
+      <div className="w-[84%] min-h-[200vh] pb-14">
         <header className="h-[9vh] flex items-end justify-between px-12">
           <div className="text-grey relative">
             <div className="text-grey fadeInLeft">Welcome, 大家 !</div>
@@ -96,8 +111,51 @@ export default function Home() {
           <h2 className="text-outline uppercase tracking-wide text-[10px]">
             Playground
           </h2>
-          <div id="projectShowcaseCarousel" className="mt-6 overflow-hidden fadeInLeft">
-            <Carousel />
+          <div
+            id="projectShowcaseCarousel"
+            className="mt-6 overflow-hidden fadeInLeft flex flex-col gap-7"
+          >
+            <Marquee className="flex">
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
+                
+                Tech Skills
+              </p>
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
+                
+                Tech Skills
+              </p>
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
+                
+                Tech Skills
+              </p>
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
+                
+                Tech Skills
+              </p>
+            </Marquee>
+            <hr />
+            <Carousel projectData={TechData} />
+            <hr />
+            <Marquee className="flex">
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
+                
+                Non - Tech Skills
+              </p>
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
+                
+                Non - Tech Skills
+              </p>
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
+                
+                Non - Tech Skills
+              </p>
+              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
+                
+                Non - Tech Skills
+              </p>
+            </Marquee>
+            <hr />
+            <Carousel projectData={NonTechData} />
           </div>
         </section>
       </div>
