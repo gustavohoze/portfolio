@@ -61,11 +61,15 @@
 }
 .carousel--item h2 {
     z-index: 1;
-    font-size: 3vw;
-    padding-block: 10px;
+    font-size: 1.6vw;
+    padding-block: 25px;
     width: 265px;
     background: #000;
     text-align: center;
+}
+
+.carousel--item h2.sizedDown{
+    font-size: 1.1vw;
 }
 
 .carousel--progress {

@@ -156,7 +156,11 @@ const Carousel: React.FC = () => {
         <figure>
           <Image src={item.src} alt={item.title} width={275} height={600} />
         </figure>
-        <h2 className="uppercase">{item.title}</h2>
+
+        <h2 className={item.title.length > 18 ? "sizedDown" : ""}>
+        {item.title}
+      </h2>
+        
         <div className="absolute z-20 centerAbsolute flex flex-col gap-4">
           {item.stacks?.map((stack, stackIndex) => (
             <Image

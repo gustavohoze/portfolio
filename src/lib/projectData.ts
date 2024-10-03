@@ -4,7 +4,8 @@ import Fig3 from "@/app/assets/Fig3.webp";
 import Fig4 from "@/app/assets/Fig4.webp";
 import Fig5 from "@/app/assets/Fig5.webp";
 import Fig6 from "@/app/assets/Fig6.webp";
-import Fig7 from "@/app/assets/Fig1.webp";
+import Java from "@/app/assets/Java.webp";
+import JavaFX from "@/app/assets/JavaFX.webp";
 import MySQL from "@/app/assets/MySQL.webp";
 import Next from "@/app/assets/Next.webp";
 import Postman from "@/app/assets/Postman.webp";
@@ -23,7 +24,8 @@ import Git from "@/app/assets/Git.webp";
 export const projectData = [
   { 
     src: Fig1.src, 
-    title: "Project 1", 
+    title: "CariKursus", 
+    gitLink:"https://github.com/gustavohoze/carikursusfixed.git",
     stacks: [
       { src: Postman.src, alt: "Postman" },
       { src: MySQL.src, alt: "MySQL" },
@@ -36,7 +38,8 @@ export const projectData = [
   },
   { 
     src: Fig2.src, 
-    title: "Project 2", 
+    title: "Pudding Fest", 
+    gitLink:"https://github.com/gustavohoze/LnT-FInal-Project.git",
     stacks: [
       { src: HTML.src, alt: "HTML" },
       { src: CSS.src, alt: "CSS" },
@@ -47,7 +50,8 @@ export const projectData = [
   },
   { 
     src: Fig3.src, 
-    title: "Project 3", 
+    title: "BNCC'S Praetorian", 
+    gitLink:"https://github.com/gustavohoze/FE-B.git",
     stacks: [
       { src: HTML.src, alt: "HTML" },
       { src: CSS.src, alt: "CSS" },
@@ -60,14 +64,20 @@ export const projectData = [
   },
   { 
     src: Fig4.src, 
-    title: "Project 4", 
+    title: "First Portfolio", 
+    gitLink:"https://github.com/gustavohoze/Shecraa.git",
     stacks: [
       { src: HTML.src, alt: "HTML" },
       { src: CSS.src, alt: "CSS" },
       { src: JavaScript.src, alt: "JavaScript" }
     ]
   },
-  { src: Fig5.src, title: "Project 5", stacks: [] },
-  { src: Fig6.src, title: "Project 6", stacks: [] },
-  { src: Fig7.src, title: "Project 7", stacks: [] },
+  { src: Fig5.src, title: "CRUD System",gitLink:"https://github.com/gustavohoze/LnTMidJava.git", stacks: [{
+  src: Java.src, alt: "JAVA"
+  }] },
+  { src: Fig6.src, title: "JAVAFX & Database Integration",gitLink:"https://github.com/gustavohoze/LnTFinalJava.git", stacks: [{
+    src: Java.src, alt: "JAVA"
+    },{
+      src: JavaFX.src, alt: "JAVAFX"
+    }] },
 ];

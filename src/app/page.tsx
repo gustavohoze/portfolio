@@ -11,7 +11,7 @@ const navLinks = [
 const projectCategories = [
   {
     title: "Web Development",
-    projects: ["API Integration", "Pudding Fest", "BNCC's Praetorian", "First Portfolio"],
+    projects: ["Cari kursus", "Pudding Fest", "BNCC's Praetorian", "First Portfolio"],
   },
   {
     title: "Java Programming",
