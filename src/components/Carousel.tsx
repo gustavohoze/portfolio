@@ -178,7 +178,7 @@ const Carousel: React.FC<CarouselProps> = ({ projectData }) => {
   }, [projectData]);
 
   const carouselItems = useMemo(() => 
-    projectData.map((item, index) => (
+    projectData.map((item) => (
       <div className="carousel--item" key={item.gitLink} >
         <figure>
           <Image src={item.src} alt={item.title} width={275} height={600} />

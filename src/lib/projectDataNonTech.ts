@@ -1,4 +1,3 @@
-import Fig1 from "@/app/assets/Fig1.webp";
 import Fig2 from "@/app/assets/Fig2.webp";
 import Fig3 from "@/app/assets/Fig3.webp";
 import Fig4 from "@/app/assets/Fig4.webp";
