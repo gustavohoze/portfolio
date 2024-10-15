@@ -20,13 +20,18 @@ import CSS from "@/app/assets/CSS.webp";
 import JavaScript from "@/app/assets/JavaScript.webp";
 import Firebase from "@/app/assets/Firebase.webp";
 import Git from "@/app/assets/Git.webp";
+import JavaDesktop from "@/app/assets/JavaDesktop.png"
+import JavaPhone from "@/app/assets/JavaPhone.png"
+import JavaTablet from "@/app/assets/JavaTablet.png"
 
 export const projectNonTechData = [
   
     
     {
-      src: Fig1.src,
+      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
       title: "CariKursus",
+      desc:"BNCC’S Member ‘22 — ",
+      subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/carikursusfixed.git",
       stacks: [
         { src: Postman.src, alt: "Postman" },
@@ -39,8 +44,9 @@ export const projectNonTechData = [
       ],
     },
     {
-      src: Fig2.src,
-      title: "Pudding Fest",
+      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      title: "Pudding Fest",desc:"BNCC’S Member ‘22 — ",
+      subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/LnT-FInal-Project.git",
       stacks: [
         { src: HTML.src, alt: "HTML" },
@@ -51,8 +57,9 @@ export const projectNonTechData = [
       ],
     },
     {
-      src: Fig3.src,
-      title: "BNCC'S Praetorian",
+      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      title: "BNCC'S Praetorian",desc:"BNCC’S Member ‘22 — ",
+      subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/FE-B.git",
       stacks: [
         { src: HTML.src, alt: "HTML" },
@@ -65,8 +72,9 @@ export const projectNonTechData = [
       ],
     },
     {
-      src: Fig4.src,
-      title: "First Portfolio",
+      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      title: "First Portfolio",desc:"BNCC’S Member ‘22 — ",
+      subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/Shecraa.git",
       stacks: [
         { src: HTML.src, alt: "HTML" },
@@ -75,8 +83,9 @@ export const projectNonTechData = [
       ],
     },
     {
-      src: Fig5.src,
-      title: "CRUD System",
+      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      title: "CRUD System",desc:"BNCC’S Member ‘22 — ",
+      subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/LnTMidJava.git",
       stacks: [
         {
@@ -86,8 +95,9 @@ export const projectNonTechData = [
       ],
     },
     {
-      src: Fig6.src,
-      title: "JAVAFX & Database Integration",
+      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      title: "JAVAFX & Database Integration",desc:"BNCC’S Member ‘22 — ",
+      subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/LnTFinalJava.git",
       stacks: [
         {

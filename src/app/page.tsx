@@ -1,9 +1,7 @@
-import Carousel from "@/components/Carousel";
 import DateFormatter from "@/components/DateFormater";
 import Link from "next/link";
-import TechData from "@/lib/projectDataTech";
-import NonTechData from "@/lib/projectDataNonTech";
-import Marquee from "react-fast-marquee";
+import ProjectShowcase from "@/components/ProjectShowcase";
+import projectTechData from "@/lib/projectDataTech";
 
 const navLinks = [
   { href: "/", label: "About" },
@@ -90,7 +88,7 @@ export default function Home() {
           ))}
         </div>
       </aside>
-      <div className="w-[84%] min-h-[200vh] pb-14">
+      <div className="w-[84%] min-h-[400vh] pb-14">
         <header className="h-[9vh] flex items-end justify-between px-12">
           <div className="text-grey relative">
             <div className="text-grey fadeInLeft">Welcome, 大家 !</div>
@@ -112,50 +110,10 @@ export default function Home() {
             Playground
           </h2>
           <div
-            id="projectShowcaseCarousel"
+            id="projectShowcase"
             className="mt-6 overflow-hidden fadeInLeft flex flex-col gap-7"
           >
-            <Marquee className="flex">
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
-                
-                Tech Skills
-              </p>
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
-                
-                Tech Skills
-              </p>
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
-                
-                Tech Skills
-              </p>
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
-                
-                Tech Skills
-              </p>
-            </Marquee>
-            <hr />
-            <Carousel projectData={TechData} />
-            <hr />
-            <Marquee className="flex">
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
-                
-                Non - Tech Skills
-              </p>
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
-                
-                Non - Tech Skills
-              </p>
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-white text-shadow pr-3">
-                
-                Non - Tech Skills
-              </p>
-              <p className="text-center tracking-wide uppercase text-[32px] font-bold text-black pr-3">
-                
-                Non - Tech Skills
-              </p>
-            </Marquee>
-            <hr />
-            <Carousel projectData={NonTechData} />
+            <ProjectShowcase list={projectTechData}/>
           </div>
         </section>
       </div>
