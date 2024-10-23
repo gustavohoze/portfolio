@@ -1,7 +1,7 @@
 import DateFormatter from "@/components/DateFormater";
 import Link from "next/link";
 import ProjectShowcase from "@/components/ProjectShowcase";
-import projectTechData from "@/lib/projectDataTech";
+import projectTechData from '@/lib/projectDataTech';
 
 const navLinks = [
   { href: "/", label: "About" },

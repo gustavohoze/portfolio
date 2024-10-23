@@ -14,15 +14,20 @@ import CSS from "@/app/assets/CSS.webp";
 import JavaScript from "@/app/assets/JavaScript.webp";
 import Firebase from "@/app/assets/Firebase.webp";
 import Git from "@/app/assets/Git.webp";
-import JavaDesktop from "@/app/assets/JavaDesktop.png"
-import JavaPhone from "@/app/assets/JavaPhone.png"
-import JavaTablet from "@/app/assets/JavaTablet.png"
+import MFP from '@/app/assets/MFP.png'
+import CK from '@/app/assets/CK.png'
+import PF from '@/app/assets/PF.png'
+import BP from '@/app/assets/BP.png'
+import MJ from '@/app/assets/MJ.png'
+import FJ from '@/app/assets/FJ.png'
+
+
 
 export const projectNonTechData = [
   
     
     {
-      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      src: CK.src,
       title: "CariKursus",
       desc:"BNCC’S Member ‘22 — ",
       subdesc:"First ever web portfolio",
@@ -36,9 +41,11 @@ export const projectNonTechData = [
         { src: Prisma.src, alt: "Prisma" },
         { src: Shadcn.src, alt: "Shadcn UI" },
       ],
+      fromColor: "#1B2B34",
+      toColor: "#00FFCC",
     },
     {
-      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      src: PF.src,
       title: "Pudding Fest",desc:"BNCC’S Member ‘22 — ",
       subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/LnT-FInal-Project.git",
@@ -48,10 +55,11 @@ export const projectNonTechData = [
         { src: Jquery.src, alt: "jQuery" },
         { src: JavaScript.src, alt: "JavaScript" },
         { src: Bootstrap.src, alt: "Bootstrap" },
-      ],
+      ],fromColor: "#0F0F0F",
+      toColor: "#F5F5F5",
     },
     {
-      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      src: BP.src,
       title: "BNCC'S Praetorian",desc:"BNCC’S Member ‘22 — ",
       subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/FE-B.git",
@@ -63,10 +71,11 @@ export const projectNonTechData = [
         { src: Bootstrap.src, alt: "Bootstrap" },
         { src: Git.src, alt: "Git" },
         { src: Firebase.src, alt: "Firebase" },
-      ],
+      ],fromColor: "#212121",
+      toColor: "#FF007F",
     },
     {
-      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      src: MFP.src,
       title: "First Portfolio",desc:"BNCC’S Member ‘22 — ",
       subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/Shecraa.git",
@@ -74,10 +83,11 @@ export const projectNonTechData = [
         { src: HTML.src, alt: "HTML" },
         { src: CSS.src, alt: "CSS" },
         { src: JavaScript.src, alt: "JavaScript" },
-      ],
+      ],fromColor: "#001F3F",
+      toColor: "#0b5870",
     },
     {
-      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      src: MJ.src,
       title: "CRUD System",desc:"BNCC’S Member ‘22 — ",
       subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/LnTMidJava.git",
@@ -86,10 +96,11 @@ export const projectNonTechData = [
           src: Java.src,
           alt: "JAVA",
         },
-      ],
+      ],fromColor: "#f4a261",
+      toColor: "#001F3F",
     },
     {
-      src: [JavaDesktop.src,JavaPhone.src,JavaTablet.src],
+      src: FJ.src,
       title: "JAVAFX & Database Integration",desc:"BNCC’S Member ‘22 — ",
       subdesc:"First ever web portfolio",
       gitLink: "https://github.com/gustavohoze/LnTFinalJava.git",
@@ -102,7 +113,8 @@ export const projectNonTechData = [
           src: JavaFX.src,
           alt: "JAVAFX",
         },
-      ],
+      ],fromColor: "#001F3F",
+      toColor: "#F0F0F0",
     },
   
 ];
