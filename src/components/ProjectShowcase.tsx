@@ -68,7 +68,7 @@ const ProjectShowcase: React.FC<ProjectList> = (datas: ProjectList) => {
                 <span className='text-white'>{data.desc}</span>
                 <span className='text-white font-[100]'>{data.subdesc}</span>
               </div>
-              <Image src={data.src[0]} alt='' width={700} height={400} className='absolute right-[11%] top-[500%] z-0 rounded-lg border-8 border-grey/10 transition-all duration-500 group-hover:top-[350%] group-hover:border-0'/>
+              <Image src={data.src} alt='' width={700} height={400} className='absolute right-[11%] top-[500%] z-0 rounded-lg border-8 border-grey/10 transition-all duration-500 group-hover:top-[350%] group-hover:border-0'/>
             </div>
           </div>
         </div>
