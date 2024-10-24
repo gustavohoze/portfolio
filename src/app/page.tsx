@@ -6,7 +6,7 @@ import projectTechData from '@/lib/projectDataTech';
 const navLinks = [
   { href: "/", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/cv", label: "CV" },
+  { href: "/CV", label: "CV" },
 ];
 
 const projectCategories = [
@@ -34,60 +34,7 @@ const contactMethods = [
 ];
 
 export default function Home() {
-  return (
-    <main className="min-h-screen w-full bg-white flex">
-      <aside className="fadeInLeft w-[16%] h-screen border-r border-outline sticky top-0 left-0">
-        <div className="h-[27%] px-8 pt-6 border-b border-outline">
-          <div className="flex flex-col items-start gap-2 h-[80%] text-black">
-            <Link
-              href="/"
-              className="font-[900] text-[23px] w-[90px] h-[51.92px] bg-greyBox flex items-center justify-center text-black p-2"
-            >
-              何泽
-            </Link>
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-        <nav className="h-[36%] pl-8 border-b border-outline flex flex-col justify-center">
-          <div className="flex flex-col items-start gap-2 h-[80%]">
-            {projectCategories.map((category) => (
-              <div key={category.title} className="flex flex-col gap-1">
-                <span className="text-outline uppercase tracking-wide text-[10px]">
-                  {category.title}
-                </span>
-                {category.projects.map((project) => (
-                  <Link
-                    key={project}
-                    href="#"
-                    className="text-grey capitalize text-[10px]"
-                  >
-                    {project}
-                  </Link>
-                ))}
-              </div>
-            ))}
-          </div>
-        </nav>
-        <div className="h-[37%] pl-8 pt-4">
-          <span className="text-outline uppercase tracking-wide text-[10px]">
-            Contact
-          </span>
-          {contactMethods.map((method) => (
-            <Link
-              key={method.label}
-              href={method.href}
-              className="block text-grey capitalize tracking-wide text-[10px] mt-1"
-              target="blank"
-            >
-              {method.label}
-            </Link>
-          ))}
-        </div>
-      </aside>
+  return (      
       <div className="w-[84%] min-h-[400vh] pb-14">
         <header className="h-[9vh] flex items-end justify-between px-12">
           <div className="text-grey relative">
@@ -117,6 +64,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-    </main>
+
   );
 }
