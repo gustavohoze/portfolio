@@ -1,37 +1,7 @@
 import DateFormatter from "@/components/DateFormater";
-import Link from "next/link";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import projectTechData from '@/lib/projectDataTech';
 
-const navLinks = [
-  { href: "/", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/CV", label: "CV" },
-];
-
-const projectCategories = [
-  {
-    title: "Web Development",
-    projects: [
-      "Cari kursus",
-      "Pudding Fest",
-      "BNCC's Praetorian",
-      "First Portfolio",
-    ],
-  },
-  {
-    title: "Java Programming",
-    projects: ["CRUD System", "JavaFX & Database Integration"],
-  },
-  { title: "Team Projects", projects: [] },
-  { title: "Others", projects: [] },
-];
-
-const contactMethods = [
-  { label: "Mail", href: "mailto:gustaveronic@gmail.com" },
-  { label: "WhatsApp", href: "https://wa.me/+6285104937022" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/gustavo-hoze/" },
-];
 
 export default function Home() {
   return (      
@@ -64,6 +34,5 @@ export default function Home() {
           </div>
         </section>
       </div>
-
   );
 }

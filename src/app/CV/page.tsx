@@ -2,7 +2,7 @@ import DateFormater from '@/components/DateFormater'
 import React from 'react'
 import Image from 'next/image'
 import CV from '@/app/assets/CV.png'
-import { Download, Mail, Phone, Linkedin, ExternalLink } from 'lucide-react'
+import { DownloadIcon } from 'lucide-react'
 
 const page = () => {
   return (
@@ -62,7 +62,7 @@ const page = () => {
         <button 
           className="w-full max-w-md bg-gray-700 py-2 rounded-md flex items-center justify-center gap-4 hover:bg-gray-500 transition-colors"
         >
-          <Download size={20} color="white" />
+          <DownloadIcon size={20} color="white" />
           <span className="text-white">Download CV</span>
         </button>
       </a>
