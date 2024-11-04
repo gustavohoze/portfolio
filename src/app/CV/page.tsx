@@ -16,13 +16,13 @@ const page = () => {
           </div>
           <DateFormater />
         </header>
+        <br />
+        <div className='px-12'><hr /></div>
     <div className='flex justify-evenly items-center mt-14'>
-    <div className='w-[40%] h-[82vh] border-4 border-grey overflow-hidden flex items-center'>
+    <div className='w-[40%] h-[82vh] border-4 border-gray-400 overflow-hidden flex items-center fadeInLeft'>
         <Image src={CV} alt='CV_2024' objectFit='cover' objectPosition='left bottom'></Image>
     </div>
-    <div className='w-[50%] h-[82vh] flex flex-col items-center justify-center py-4'>
-
-    
+    <div className='w-[50%] h-[82vh] flex flex-col items-center justify-center py-4 fadeInRight'>   
     <div className='w-[100%] h-[52vh] rounded-md flex flex-col items-center pt-4 justify-center border-2 border-greyBox mb-4'>
     <div className="mb-6 p-0 flex flex-col">
         <h3 className="text-3xl font-bold mb-2 bg-gradient-to-b from-grey to-contrast text-transparent bg-clip-text">Hey There!</h3>
