@@ -1,6 +1,5 @@
 import DateFormater from '@/components/DateFormater'
 import React from 'react'
-import ImageCarousel from './components/ImageCarousel'
 import UnderDevelopment from '@/components/UnderDevelopment'
 
 const page = () => {
